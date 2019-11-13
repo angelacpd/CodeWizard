@@ -1,0 +1,18 @@
+$def with (page)
+$var css: static/css/bootstrap.min.css
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeWizard</title>
+
+    $if self.css:
+        $for style in self.css.split():
+            <link rel="stylesheet" href="$style" />
+</head>
+<body>
+    <div id="app">
+        $:page
+    </div>
+</body>
+</html>
