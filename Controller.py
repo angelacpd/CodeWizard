@@ -1,7 +1,8 @@
 import web
 
 urls = (
-    '/', 'home'
+    '/', 'home',
+    '/register', 'register'
 )
 
 render = web.template.render("Views/Templates", base="MainLayout")
@@ -17,6 +18,11 @@ class home:
         # return render.MainLayout()
         return render.Home()
         # return "home"
+
+
+class register:
+    def GET(self):
+        return render.Register()
 
 if __name__ == "__main__":
     app.run()
