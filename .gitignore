@@ -2,3 +2,4 @@
 *.xml
 __pycache__/
 *.pyc
+codewizard_env/
