@@ -14,7 +14,9 @@ class RegisterModel:
         id1 = self.Users.insert({"username": data.username, "name": data.name, "password": hashed,
                                 "email": data.email})
         print("uid is", id1)
+        '''
         myuser = self.Users.find_one({"username": data.username})
 
         if bcrypt.checkpw("avocado1".encode(), myuser["password"]):
             print("this matches")
+        '''
