@@ -37,7 +37,6 @@ class Login:
 class PostRegistration:
     def POST(self):
         data = web.input()
-
         reg_model = RegisterModel.RegisterModel()
         reg_model.insert_user(data)
 

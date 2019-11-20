@@ -25,10 +25,10 @@ $(document).ready(function(){
             type: 'POST',
             data: form,
             success: function(response){
-                if (res == "error"){
+                if (response == "error"){
                     alert("Could not log in.");
                 }else{
-                    console.log("Logged in as", res);
+                    console.log("Logged in as", response);
                 }
             }
         });
