@@ -29,6 +29,7 @@ $(document).ready(function(){
                     alert("Could not log in.");
                 }else{
                     console.log("Logged in as", response);
+                    window.location.href = "/"
                 }
             }
         });
