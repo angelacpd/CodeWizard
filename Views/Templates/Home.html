@@ -3,4 +3,14 @@
         <h1>Hello, CodeWizard!</h1>
     $else:
         <h1>Hello, $session['user']['name'] !</h1>
+
+
+
+    <div class="post-box">
+        <form id="post-activity">
+            <textarea name="content" class="post-input" placeholder="What's new, $session['user']['name']?"></textarea>
+            <button id="post-button" class="btn btn-info btn-raised" type="submit"><span class="mdi mdi-send"></span>Post</button>
+        </form>
+    </div>
+
 </div>
