@@ -32,10 +32,13 @@ class Home:
         if isCorrect:
             session_data["user"] = isCorrect
 
+        post_model = Posts.Posts()
+        posts = post_model.get_all_posts()
+
         # print("Hello, World!")
         # return
         # return render.MainLayout()
-        return render.Home()
+        return render.Home(posts)
         # return "home"
 
 
