@@ -64,4 +64,22 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on('submit', '#settings-form', function(e){
+        e.preventDefault();
+
+        var form = $(this).serialize();
+        $.ajax({
+            url: 'update-settings',
+            type: 'POST',
+            data: form,
+            success: function(response){
+                if(response == 'success'){
+                    window.location.href = window.location.href;
+                }else{
+                    alert(response);
+                }
+            }
+        });
+    });
+
 });
