@@ -28,6 +28,7 @@ $def with (posts)
                 <div class="post-box">
                     <form id="post-activity">
                         <textarea name="content" class="post-input" placeholder="What's new, $session['user']['name']?"></textarea>
+                        <span class="timestamp">$post['timestamp']</span>
                         <button id="post-button" class="btn btn-info btn-raised" type="submit"><span class="mdi mdi-send"></span>Post</button>
                     </form>
                 </div>

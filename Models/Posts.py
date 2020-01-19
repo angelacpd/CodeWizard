@@ -1,5 +1,6 @@
 import bcrypt
 import pymongo
+import humanize
 from pymongo import MongoClient
 
 
@@ -25,6 +26,7 @@ class Posts:
         for post in all_posts:
             print(post)
             post["user"] = self.Users.find_one({"username": post["username"]})
+            post["timestamp"] = humanize.naturaltime(datetime.datetime.now() - post["date_added"])
             new_posts.append(post)
 
         return new_posts
